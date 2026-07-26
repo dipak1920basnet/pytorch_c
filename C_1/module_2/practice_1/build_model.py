@@ -4,7 +4,10 @@ import torch.nn as nn
 torch.manual_seed(42)
 
 class SimpleMNISTDNN(nn.Module):
+    
     def __init__(self):
+        super().__init__()
+        
         self.flatten = nn.Flatten()
         self.layers = nn.Sequential(
             nn.Linear(784,128),
