@@ -44,7 +44,6 @@ def Train(model, loss_func, optimizer, epochs, train_loader, test_loader, device
     for epoch in range(epochs):
         models, avg_loss = train_epoch(model, loss_func, optimizer, train_loader, device)
         model_accuracy = Evaluate(models, test_loader, device)
-
         print(f"Epoch:{epoch} -> loss:{avg_loss} -> model accuracy:{model_accuracy}")
 
 if __name__ == "__main__":
