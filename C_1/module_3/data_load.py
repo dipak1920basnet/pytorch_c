@@ -32,3 +32,4 @@ class OxfordFlowersDataset(Dataset):
         label = self.labels[idx]
 
         return image, label
+    
